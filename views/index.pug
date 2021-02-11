@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Chart  
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css')
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="/css/index.css")
+    body 
+
+        section(class="bannerHide")
+            h2 Esperando a que los Datos sean transferidos si este proceso tarda mas de un minuto vuelva a intentarlo 
+            p  ¿ Aun no llegan los datos ? Comunicate con el administrador
+
+        section(class="mtcBanner")
+            h1(id="mtcTitle") 
+            h2(id="mtcValue")
+        section(class="chartsBannerCont")
+            h2 Aqui unas graficas las cuales representan todos los valores ingresados
+            canvas(id="myChart" max-width="400px" max-height="400px")
+
+        script(src="/socket.io/socket.io.js")   
+        script(src='https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js')
+        script(src="/js/app.js") 

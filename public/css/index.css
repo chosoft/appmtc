@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif;
+    color: #191919;
+    font-size: 19px;
+}
+
+.bannerHide{
+    display:none;
+    flex-direction: column;
+    align-items: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background:#191919;
+    width: 100%;
+    height: 100vh;
+    padding:250px;
+    padding-left: 150px;
+}
+
+.bannerHide h2{
+    text-align: left;
+    line-height:80px;
+}
+.bannerHide h2::after{
+    content: ' #';
+    color: blueviolet;
+}
+.bannerHide h2::before{
+    content: '# ';
+    color: blueviolet;
+}
+.bannerHide p{
+    color: #ccc;
+    font-size: 20px;
+}
+.mtcBanner{
+    width:100%;
+    height: 50vh;
+    background: #191919;
+    padding: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mtcBanner h1,h2{
+    color: #fff;
+    text-align:left;
+    font-size: 50px;
+    text-align:center
+}
+.mtcBanner h2{
+    font-weight: bold;
+    margin-top: 20px;
+}
+.mtcBanner h2::after{
+    content: ' *';
+    color:blueviolet;
+}
+.mtcBanner h2::before{
+    content: '* ';
+    color:blueviolet;
+}
+
+.chartsBannerCont{
+    width: 100%;
+    height: auto;
+    padding: 150px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chartsBannerCont h2{
+    font-size: 35px;
+    text-align: left;
+    margin-bottom: 25px;
+    color: #191919;
+}
