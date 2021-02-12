@@ -6,9 +6,12 @@ function getRandomInt(min, max) {
 socket.on('mtcData', (data) => {
     let titleMtc = document.querySelector('#mtcTitle')
     let mtcValue = document.querySelector('#mtcValue')
+    let lowToUp = document.querySelector('.bannerLine')
     let repetitionsTemp = 0
     let arrayRepetition = []
     let colorsLabels = []
+    let arraySort = data.mtcValues.sort((a,b) => a-b)
+    let template = ''
     titleMtc.textContent = `La MTC Elegida es La ${data.mtcType} y el valor de la ${data.mtcType} es:`
     mtcValue.textContent = `${data.mtcValue}`
     const labels = [... new Set(data.mtcValues)]
@@ -54,4 +57,10 @@ socket.on('mtcData', (data) => {
             }
         }
     });
+    console.log(arraySort)
+    arraySort.forEach(item => {
+        template += `<div class="numberPlace"><strong>${item}</strong></div>`
+    })
+
+    lowToUp.innerHTML = template
 })

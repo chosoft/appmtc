@@ -89,3 +89,61 @@ body{
     margin-bottom: 25px;
     color: #191919;
 }
+
+.chartsBannerCont .bannerLine{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.chartsBannerCont .bannerLine .numberPlace{
+    width: 80px;
+    height: 80px;
+    padding:10px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    background: blueviolet;    
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    margin-bottom: 90px;
+}
+
+.chartsBannerCont .bannerLine .numberPlace:hover{
+    background:none;
+    border-color: blueviolet;
+}
+
+.chartsBannerCont .bannerLine .numberPlace::after{
+    content:'';
+    width: 5px;
+    height: 100px;
+    background: blueviolet;
+    position: absolute;
+    bottom:-100px;
+}
+.chartsBannerCont .bannerLine .numberPlace:last-child::after{
+    content: '';
+    width:0;
+    height:0;
+    background: none
+}
+.chartsBannerCont .bannerLine .numberPlace strong{
+    font-family: 'Oxygen',sans-serif;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.chartsBannerCont .bannerLine .numberPlace:hover strong{
+    color:#191919;
+}
